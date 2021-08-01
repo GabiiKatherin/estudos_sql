@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS agencia (
 /*Tudo que for imediato de olhar, separe numa tabela
 Para que as tabelas não concorram entre si*/
 CREATE TABLE IF NOT EXISTS cliente(
-	numero BIGSERIAL PRIMARY,
+	numero BIGSERIAL PRIMARY KEY,
 	nome VARCHAR(120) NOT NULL,
 	email VARCHAR(250) NOT NULL,
 	
