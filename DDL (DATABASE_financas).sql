@@ -26,14 +26,13 @@ CREATE TABLE IF NOT EXISTS agencia (
 /*Tudo que for imediato de olhar, separe numa tabela
 Para que as tabelas não concorram entre si*/
 CREATE TABLE IF NOT EXISTS cliente(
-	numero BIGSERIAL NOT NULL,
+	numero BIGSERIAL PRIMARY,
 	nome VARCHAR(120) NOT NULL,
 	email VARCHAR(250) NOT NULL,
 	
 	ativo BOOLEAN NOT NULL DEFAULT TRUE,
 	data_criacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	
-	PRIMARY KEY(numero)
 );
 
 CREATE TABLE IF NOT EXISTS conta_corrente(
