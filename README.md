@@ -4,7 +4,7 @@
 ###### O curso ensinou como trabalhar com PostgreSQL, um gerenciados de bando de dados realcional
 
 - [x] Fundamentos de bancos de dados
-- [x] Instalação do PostgreSQL (Ubuntu, Windows e CenOS Had
+- [x] Instalação do PostgreSQL (Ubuntu, Windows e CenOS Had)
 - [x] Arquivo postgre.conf
 - [x] Conhecendo a ferramenta PGAdmin
 - [x] Como administrar usuários no banco de dados
