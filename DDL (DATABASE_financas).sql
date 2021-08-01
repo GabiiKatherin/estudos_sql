@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS cliente(
 	PRIMARY KEY(numero)
 );
 
-CREATE TABLE conta_corrente(
+CREATE TABLE IF NOT EXISTS conta_corrente(
 	/*Fará referência a vários bancos*/
 	banco_numero INTEGER NOT NULL,
 	agencia_numero INTEGER NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE conta_corrente(
 	FOREIGN KEY (cliente_numero) REFERENCES cliente (numero)
 );
 
-CREATE TABLE tipo_transacao(
+CREATE TABLE IF NOT EXISTS tipo_transacao(
 	id SMALLSERIAL PRIMARY KEY,
 	nome VARCHAR(50) NOT NULL,
 
@@ -65,7 +65,7 @@ CREATE TABLE tipo_transacao(
 
 );
 
-CREATE TABLE cliente_transacoes(
+CREATE TABLE IF NOT EXISTS cliente_transacoes(
 	/*Se essa TABLE vai referenciar uma transação do cliente, ela envolve a conta corrente dele o que implica a inclusao de uma referencia*/
 	id BIGSERIAL PRIMARY KEY,
 	
