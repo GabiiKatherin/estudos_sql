@@ -84,3 +84,5 @@ CREATE TABLE cliente_transacoes(
 	/*Não vamos inserir o campo "ativo" porque é uma transação e ela irá ocorrer*/
 	data_criacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+/*Agora iremos inserir dados respeitando as PRIMARY KEY's e FOREIGN KEY's*/
