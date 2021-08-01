@@ -19,4 +19,4 @@
 - [ ] Transações
 - [ ] Funções que podem ser criadas pelo desenvolvedor
 
-###### Esse módulo é parte integrante do Santander Bootcamp | Fullstack Developer
+###### Esse módulo é parte integrante do Santander Bootcamp | Fullstack Developer promovido em parceria com a Digital Inovation One.
