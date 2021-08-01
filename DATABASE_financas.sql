@@ -64,3 +64,23 @@ CREATE TABLE tipo_transacao(
 	data_criacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 
 );
+
+CREATE TABLE cliente_transacoes(
+	/*Se essa TABLE vai referenciar uma transação do cliente, ela envolve a conta corrente dele o que implica a inclusao de uma referencia*/
+	id BIGSERIAL PRIMARY KEY,
+	
+	banco_numero INTEGER NOT NULL,
+	agencia_numero INTEGER NOT NULL,
+	conta_corrente_numero BIGINT NOT NULL,
+	conta_corrente_digito SMALLINT NOT NULL,
+	cliente_numero BIGINT NOT NULL,
+	tipo_transacao_id SMALLINT NOT NULL,
+	
+	/*O valor pode ter 15 numeros e os dois ultimos são casas decimais*/
+	valor NUMERIC(15,2),
+
+	FOREIGN KEY (banco_numero,agencia_numero,conta_corrente_numero,conta_corrente_digito,cliente_numero) REFERENCES conta_corrente(banco_numero,agencia_numero,numero,digito,cliente_numero),
+	
+	/*Não vamos inserir o campo "ativo" porque é uma transação e ela irá ocorrer*/
+	data_criacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
