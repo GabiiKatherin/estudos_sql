@@ -3,12 +3,12 @@
 ##### Módulo de: Conceitos e melhores práticas com banco de dados
 ###### O curso ensinou como trabalhar com PostgreSQL, um gerenciados de bando de dados realcional
 
-- [X] Fundamentos de bancos de dados
-- [X] Instalação do PostgreSQL (Ubuntu, Windows e CenOS Had
-- [X] Arquivo postgre.conf
-- [X] Conhecendo a ferramenta PGAdmin
-- [X] Como administrar usuários no banco de dados
-- [X] Objetos e comandos no banco de dados
+- [x] Fundamentos de bancos de dados
+- [x] Instalação do PostgreSQL (Ubuntu, Windows e CenOS Had
+- [x] Arquivo postgre.conf
+- [x] Conhecendo a ferramenta PGAdmin
+- [x] Como administrar usuários no banco de dados
+- [x] Objetos e comandos no banco de dados
 
 ##### Structured Query Language (SQL)
 - [ ] DML e Truncate
