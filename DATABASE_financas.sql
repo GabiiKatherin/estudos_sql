@@ -55,3 +55,12 @@ CREATE TABLE conta_corrente(
 	FOREIGN KEY (banco_numero,agencia_numero) REFERENCES agencia (numero,banco_numero),
 	FOREIGN KEY (cliente_numero) REFERENCES cliente (numero)
 );
+
+CREATE TABLE tipo_transacao(
+	id SMALLSERIAL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+
+	ativo BOOLEAN NOT NULL DEFAULT TRUE,
+	data_criacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+
+);
