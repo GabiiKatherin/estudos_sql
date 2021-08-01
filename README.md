@@ -3,7 +3,7 @@
 ##### Módulo de: Conceitos e melhores práticas com banco de dados
 ###### O curso ensinou como trabalhar com PostgreSQL, um gerenciados de bando de dados realcional
 
-- [x] Fundamentos de bancos de dados
+- [x] Fundamentos de bancos de dados ALTERADO
 - [x] Instalação do PostgreSQL (Ubuntu, Windows e CenOS Had)
 - [x] Arquivo postgre.conf
 - [x] Conhecendo a ferramenta PGAdmin
