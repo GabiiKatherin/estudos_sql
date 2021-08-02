@@ -12,7 +12,7 @@
 
 ##### Structured Query Language (SQL)
 - [x] DML e Truncate
-- [ ] Funções agregadas em PostgreSQL
+- [x] Funções agregadas em PostgreSQL
 - [ ] Trabalhando com JOINs
 - [ ] Otimizando código com CTE
 - [ ] Como as VIEWS auxiliam no acesso ao banco de dados
