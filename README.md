@@ -11,7 +11,7 @@
 - [x] Objetos e comandos no banco de dados
 
 ##### Structured Query Language (SQL)
-- [x] DML e Truncate
+- [ ] DML e Truncate
 - [ ] Funções agregadas em PostgreSQL
 - [ ] Trabalhando com JOINs
 - [ ] Otimizando código com CTE
