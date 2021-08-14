@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS cliente_transacoes (
 
 --EXERCÍCIO: Refazer o SELECT incluindo as transações de cada cliente, os tipos de transação de cada cliente.
 SELECT banco.nome,
-      agencia.nome,
+	 agencia.nome,
      conta_corrente.numero,
      conta_corrente.digito,
      tipo_transacao.nome,
