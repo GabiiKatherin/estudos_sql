@@ -78,7 +78,28 @@ CREATE TABLE IF NOT EXISTS cliente_transacoes (
 
 /*Agora iremos inserir dados respeitando as PRIMARY KEY's e FOREIGN KEY's*/
 
-
+--EXERCÍCIO: Refazer o SELECT incluindo as transações de cada cliente, os tipos de transação de cada cliente.
+SELECT banco.nome,
+      agencia.nome,
+     conta_corrente.numero,
+     conta_corrente.digito,
+     tipo_transacao.nome,
+     cliente_transacoes.valor,
+     cliente.nome
+	 
+FROM banco
+JOIN agencia ON agencia.banco_numero = banco.numero
+JOIN conta_corrente 
+   ON conta_corrente.banco_numero = banco.numero
+   AND conta_corrente.agencia_numero = agencia.numero
+JOIN cliente
+   ON cliente.numero = conta_corrente.cliente_numero
+   --segui o ex anterior pra selecionar o cliente, agencia e conta
+   --Na tabela cliente_transacoes q que referenciamos a transacao
+JOIN cliente_transacoes
+   ON cliente_transacoes.cliente_numero = cliente.numero
+JOIN tipo_transacao
+   ON cliente_transacoes.tipo_transacao_id = tipo_transacao.id;
 
 
 
