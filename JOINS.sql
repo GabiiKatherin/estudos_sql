@@ -31,6 +31,19 @@ LEFT JOIN agencia ON agencia.banco_numero = banco.numero;
 --Temos 438 registros, porque ele vai retornar todos os bancos que possuem relacionamento junto com as agências e todos os que não tem relação alguma
 
 SELECT banco.numero, banco.nome, agencia.numero, agencia.nome
-FROM banco
-RIGHT JOIN agencia ON agencia.banco_numero = banco.numero;
+FROM agencia
+RIGHT JOIN banco ON banco.numero = agencia.numero;
 --Uma obs importante: esse RIGHT JOIN funcionou 
+--RIGHT JOIN: O right só vai funcionar se houver mais registros à direita do que a esquerda
+
+SELECT agencia.numero, agencia.nome, banco_numero, banco.nome;
+FROM agencia
+LEFT JOIN banco ON banco.numero = agencia.banco_numero;
+--esse é o correto de se fazer nesse caso
+
+SELECT banco.numero, banco.nome, agencia.numero, agencia.nome
+FROM banco
+FULL JOIN agencia ON agencia.banco_numero = banco.numero;
+--ele trás todos os bancos e todas as agências, todas as possibilidades que temos
+--veio igual ao outro porque, nesse caso, não temos nenhuma agencia sem banco, se houvesse, veríamos o nome da agencia com o banco NULL
+--Lá atrás nós forçamos o relacionamento dizendo que o banco seria NOT NULL
