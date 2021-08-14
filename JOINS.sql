@@ -70,3 +70,22 @@ CROSS JOIN teste_b tblb;
 
 DROP TABLE IF EXISTS teste_a;
 DROP TABLE IF EXISTS teste_b;
+
+--Vamos fazer um JOIN completo
+SELECT  banco.nome,
+		agencia.nome,
+		conta_corrente.numero,
+		conta_corrente.digito,
+		cliente.nome
+--o mais importante é sempre seguir uma ordem que faça sentido na relação entre as tabelas
+FROM banco 
+JOIN agencia ON agencia.banco_numero = banco.numero
+JOIN conta_corrente
+	--ON conta_corrente.banco_numero = agencia.banco_numero;
+	ON conta_corrente.banco_numero = banco.numero
+	AND conta_corrente.agencia_numero = agencia.numero
+JOIN cliente
+	ON cliente.numero = conta_corrente.cliente_numero;
+--Fizemos um JOIN entre 3 tabelas e relacionamos todos os dados
+
+
