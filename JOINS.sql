@@ -47,3 +47,26 @@ FULL JOIN agencia ON agencia.banco_numero = banco.numero;
 --ele trás todos os bancos e todas as agências, todas as possibilidades que temos
 --veio igual ao outro porque, nesse caso, não temos nenhuma agencia sem banco, se houvesse, veríamos o nome da agencia com o banco NULL
 --Lá atrás nós forçamos o relacionamento dizendo que o banco seria NOT NULL
+
+CREATE TABLE IF NOT EXISTS teste_a (id serial primary key, valor varchar(10));
+CREATE TABLE IF NOT EXISTS teste_b (id serial primary key, valor varchar(10));
+
+INSERT INTO teste_a (valor) VALUES  ('teste 1');
+INSERT INTO teste_a (valor) VALUES  ('teste 2');
+INSERT INTO teste_a (valor) VALUES  ('teste 3');
+INSERT INTO teste_a (valor) VALUES  ('teste 4');
+
+INSERT INTO teste_b (valor) VALUES  ('teste a');
+INSERT INTO teste_b (valor) VALUES  ('teste b');
+INSERT INTO teste_b (valor) VALUES  ('teste c');
+INSERT INTO teste_b (valor) VALUES  ('teste d');
+
+SELECT tbla.valor, tblb.valor
+--tbls e tblb são apelidos
+FROM teste_a tbla
+CROSS JOIN teste_b tblb;
+
+--ele cria uma matriz e isso é um desperdício de recurso
+
+DROP TABLE IF EXISTS teste_a;
+DROP TABLE IF EXISTS teste_b;
