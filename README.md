@@ -15,9 +15,9 @@
 - [x] Funções agregadas em PostgreSQL
 - [x] Trabalhando com JOINs
 - [x] Otimizando código com CTE
-- [ ] Como as VIEWS auxiliam no acesso ao banco de dados
-- [ ] Transações
-- [ ] Funções que podem ser criadas pelo desenvolvedor
+- [x] Como as VIEWS auxiliam no acesso ao banco de dados
+- [x] Transações
+- [x] Funções que podem ser criadas pelo desenvolvedor
 
 ###### Esse módulo é parte integrante do Santander Bootcamp | Fullstack Developer promovido em parceria com a Digital Inovation One.
 ###### Certificado de conclusão: https://certificates.digitalinnovation.one/27D44A88
